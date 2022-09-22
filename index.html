@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f5c924f9cd.js" crossorigin="anonymous" ></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+            <header class="calculator__header header">
+                <div class="header__container">
+                    <div class="header__menu">
+                        <div class="header__checkbox checkbox">
+                            <input type="checkbox" id="switch" class="checkbox__switch">
+                            <label for="switch" class="checkbox__label">
+                                <i class="fa-solid fa-sun sun"></i>
+                                <i class="fa-solid fa-moon moon"></i>
+                            </label>
+                        </div>
+                        <div class="header__hamburger-menu">
+                            <div class="header__hamburger hamburger">
+                                <input type="checkbox" id="hamburger__checkbox" class="hamburger__checkbox">
+                                <label for="hamburger__checkbox" class="hamburger__label">
+                                    <span class="hamburger__line line1"></span>
+                                    <span class="hamburger__line line2"></span>
+                                    <span class="hamburger__line line3"></span>
+                                </label>
+                            </div>
+                            <div class="header__list header-list">
+                                <div class="header-list__button" aria-valuetext="simple">simple</div>
+                                <div class="header-list__button" aria-valuetext="engineering">engineering</div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="header__form">
+                        <label class="header__label" for="inputValue"></label>
+                        <input type="text" placeholder="0" id="inputValue" class="header__expression">
+                    </form>
+                </div>
+            </header>
+            <main class="calculator__main main">
+                <div class="main__container">
+                    <div class="main__simple-calculator simple-calculator active">
+                        <input type="button" value="AC" class="simple-calculator__button reset-btn">
+                        <div class="simple-calculator__button backspace-btn"><i class="fas fa-backspace backspace"></i></div>
+
+                        <input type="button" aria-valuetext="%" value="%" class="simple-calculator__button sign">
+                        <input type="button" aria-valuetext="/" value="&#247" class="simple-calculator__button sign">
+
+                        <input type="button" aria-valuetext="7" value="7" class="simple-calculator__button number">
+                        <input type="button" aria-valuetext="8" value="8" class="simple-calculator__button number">
+                        <input type="button" aria-valuetext="9" value="9" class="simple-calculator__button number">
+
+                        <input type="button" aria-valuetext="*" value="&#215" class="simple-calculator__button sign">
+
+                        <input type="button" aria-valuetext="4" value="4" class="simple-calculator__button number">
+                        <input type="button" aria-valuetext="5" value="5" class="simple-calculator__button number">
+                        <input type="button" aria-valuetext="6" value="6" class="simple-calculator__button number">
+
+                        <input type="button" aria-valuetext="-" value="–" class="simple-calculator__button sign">
+
+                        <input type="button" aria-valuetext="1" value="1" class="simple-calculator__button number">
+                        <input type="button" aria-valuetext="2" value="2" class="simple-calculator__button number">
+                        <input type="button" aria-valuetext="3" value="3" class="simple-calculator__button number">
+
+                        <input type="button" aria-valuetext="+" value="+" class="simple-calculator__button sign">
+
+                        <input type="button" aria-valuetext="0" value="0" class="simple-calculator__button number btn-null">
+                        <input type="button" value="." aria-valuetext="." class="simple-calculator__button sign">
+
+                        <input type="button" value="=" class="simple-calculator__button btn-equals">
+                    </div>
+                    <div class="main__engineering-calculator engineering-calculator">
+                        <div aria-valuetext="^" class="engineering-calculator__button sign"><div class="pow">x<sup>y</sup></div></div>
+                        <input type="button" aria-valuetext="sin(" value="sin" class="engineering-calculator__button sym">
+                        <input type="button" aria-valuetext="cos(" value="cos" class="engineering-calculator__button sym">
+                        <input type="button" aria-valuetext="(" value="(" class="engineering-calculator__button sym">
+                        <input type="button" aria-valuetext=")" value=")" class="engineering-calculator__button sym">
+
+                        <input type="button" aria-valuetext="√(" value="√x" class="engineering-calculator__button number sqrt">
+                        <input type="button" value="AC" class="engineering-calculator__button reset-btn">
+                        <div class="engineering-calculator__button backspace-btn"><i class="fas fa-backspace backspace"></i></div>
+                        <input type="button" aria-valuetext="%" value="%" class="engineering-calculator__button sign">
+                        <input type="button" aria-valuetext="/" value="&#247" class="engineering-calculator__button sign">
+                        <input type="button" aria-valuetext="!" value="x!" class="engineering-calculator__button sym">
+
+                        <input type="button" aria-valuetext="7" value="7" class="engineering-calculator__button number">
+                        <input type="button" aria-valuetext="8" value="8" class="engineering-calculator__button number">
+                        <input type="button" aria-valuetext="9" value="9" class="engineering-calculator__button number">
+
+                        <input type="button" aria-valuetext="*" value="&#215" class="engineering-calculator__button sign">
+
+                        <input type="button" aria-valuetext="ln(" value="ln" class="engineering-calculator__button sym">
+                        <input type="button" aria-valuetext="4" value="4" class="engineering-calculator__button number">
+                        <input type="button" aria-valuetext="5" value="5" class="engineering-calculator__button number">
+                        <input type="button" aria-valuetext="6" value="6" class="engineering-calculator__button number">
+
+                        <input type="button" aria-valuetext="-" value="–" class="engineering-calculator__button sign">
+
+                        <input type="button" aria-valuetext="lg(" value="lg" class="engineering-calculator__button sym">
+                        <input type="button" aria-valuetext="1" value="1" class="engineering-calculator__button number">
+                        <input type="button" aria-valuetext="2" value="2" class="engineering-calculator__button number">
+                        <input type="button" aria-valuetext="3" value="3" class="engineering-calculator__button number">
+
+                        <input type="button" aria-valuetext="+" value="+" class="engineering-calculator__button sign">
+
+                        <input type="button" aria-valuetext="π" value="π" class="engineering-calculator__button sym">
+                        <input type="button" aria-valuetext="e" value="e" class="engineering-calculator__button sym">
+                        <input type="button" aria-valuetext="0" value="0" class="engineering-calculator__button number btn-null">
+                        <input type="button" value="." aria-valuetext="." class="engineering-calculator__button number">
+
+                        <input type="button" value="=" class="engineering-calculator__button btn-equals">
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
